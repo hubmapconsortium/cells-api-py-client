@@ -20,7 +20,19 @@
 
 `client.select_datasets(where='cluster', ...)`:
 ```python
->>> cluster_datasets = client.select_datasets(where='cluster', has=['d4493657cde29702c5ed73932da5317c-19'])
+>>> cluster_datasets = client.select_datasets(where='cluster', has=['leiden-UMAP-1ca63edfa35971f475c91d92f4a70cb0-0'])
 >>> assert len(cluster_datasets) > 0
 
 ```
+
+`client.select_datasets(where='gene', ...)`:
+```python
+>>> gene_datasets = client.select_datasets(where='gene', has=['VIM > 1'], genomic_modality='rna', min_cell_percentage=10.0)
+>>> assert len(cluster_datasets) > 0
+
+```
+
+`client.select_datasets(where='protein', ...)`:
+```python
+>>> protein_datasets = client.select_datasets(where='protein', has=['Ki67 > 10000'], min_cell_percentage=10.0)
+>>> assert len(protein_datasets) > 0

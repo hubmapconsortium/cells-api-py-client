@@ -47,7 +47,7 @@ $ export API_ENDPOINT='https://cells.dev.hubmapconsortium.org/api/'
 
 >>> cells = cell_list[0:10]
 >>> assert len(cells) == 10
->>> assert cells[0].keys() == {'cell_id', 'modality', 'dataset', 'organ', 'clusters', 'protein_mean', 'protein_total', 'protein_covar'}
+>>> assert cells[0].keys() == {'cell_id', 'modality', 'dataset', 'organ', 'clusters'}
 
 ```
 
